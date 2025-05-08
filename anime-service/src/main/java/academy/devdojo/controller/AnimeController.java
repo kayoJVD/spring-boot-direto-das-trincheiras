@@ -1,6 +1,7 @@
 package academy.devdojo.controller;
 
 import academy.devdojo.domain.Anime;
+import academy.devdojo.domain.Producer;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,7 +13,7 @@ import java.util.List;
 @Slf4j
 public class AnimeController {
 
-    public List<Anime> animeList = new ArrayList<>();
+    public List<Producer> animeList = new ArrayList<>();
     public Long idGenarator = 3L;
 
     @GetMapping
