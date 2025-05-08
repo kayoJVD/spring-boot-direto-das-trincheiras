@@ -4,6 +4,7 @@ import academy.devdojo.domain.Anime;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -11,7 +12,8 @@ import java.util.List;
 @Slf4j
 public class AnimeController {
 
-
+    public List<Anime> animeList = new ArrayList<>();
+    public Long idGenarator = 3L;
 
     @GetMapping
     public List<Anime> listall(@RequestParam(required = false) String name) {
@@ -28,5 +30,13 @@ public class AnimeController {
                 .findFirst().orElse(null);
     }
 
+
+    // Idempotente não altera o valor, há não ser que altera o valor o post abaixo não é Idempotente
+    @PostMapping()
+    public Anime save(@RequestBody Anime anime) {
+        anime.setId(idGenarator++);
+        Anime.animeList().add(anime);
+        return anime;
+    }
 
 }

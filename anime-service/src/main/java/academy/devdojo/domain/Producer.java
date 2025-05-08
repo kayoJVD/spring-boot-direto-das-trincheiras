@@ -8,16 +8,16 @@ import java.util.List;
 
 @Data
 @AllArgsConstructor
-public class Anime {
+public class Producer {
     private Long id;
     private String name;
-    private static List<Anime> animes = new ArrayList<>();
+    private static List<Producer> animes = new ArrayList<>();
 
 
-    public static List<Anime> animeList() {
-        var hxh = new Anime(1L, "HxH");
-        var onePiece = new Anime(2L, "One Piece");
-        var kimetsu = new Anime(3L, "Kimetsu");
+    public static List<Producer> animeList() {
+        var hxh = new Producer(1L, "HxH");
+        var onePiece = new Producer(2L, "One Piece");
+        var kimetsu = new Producer(3L, "Kimetsu");
         animes.addAll(List.of(hxh, onePiece, kimetsu));
         return animes;
     }
