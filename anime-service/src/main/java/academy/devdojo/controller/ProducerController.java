@@ -21,23 +21,51 @@ public class ProducerController {
     private static final ProducerMapper MAPPER = ProducerMapper.INSTANCE;
 
     @GetMapping
-    public List<Producer> listall(@RequestParam(required = false) String name) {
+    public ResponseEntity<List<ProducerGetResponse>> listall(@RequestParam(required = false) String name) {
+        log.debug("Request received to list all producers, param name '{}'", name);
 
         var producers = Producer.producerList();
-        if (name == null) return producers;
+        List<ProducerGetResponse> producerGetResponseList = MAPPER.toProducerGetResponseList(producers);
+        if (name == null) return ResponseEntity.ok(producerGetResponseList);
 
-        return producers.stream().filter(anime -> anime.getName().equalsIgnoreCase(name)).toList();
+        List<ProducerGetResponse> response = producerGetResponseList.stream().filter(producer -> producer.getName().equalsIgnoreCase(name)).toList();
+
+        return ResponseEntity.ok(response);
     }
 
     @GetMapping("{id}")
-    public Producer findById(@PathVariable Long id) {
-        return Producer.producerList().stream().filter(producer -> producer.getId().equals(id))
-                .findFirst().orElse(null);
+    public ResponseEntity<ProducerGetResponse> findById(@PathVariable Long id) {
+        log.debug("Request to find producer by id: {}", id);
+
+        var producerGetResponse = Producer.producerList()
+                .stream()
+                .filter(producer -> producer.getId().equals(id))
+                .findFirst()
+                .map(MAPPER::toProducerGetResponse)
+                .orElse(null);
+
+        return ResponseEntity.ok(producerGetResponse);
     }
 
 
+//    @GetMapping
+//    public List<Producer> listall(@RequestParam(required = false) String name) {
+//
+//        var producers = Producer.producerList();
+//        if (name == null) return producers;
+//
+//        return producers.stream().filter(producer -> producer.getName().equalsIgnoreCase(name)).toList();
+//    }
+//
+//    @GetMapping("{id}")
+//    public Producer findById(@PathVariable Long id) {
+//        return Producer.producerList().stream().filter(producer -> producer.getId().equals(id))
+//                .findFirst().orElse(null);
+//    }
+
+
     @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE,
-    headers = "x-api-key")
+            headers = "x-api-key")
     public ResponseEntity<ProducerGetResponse> save(@RequestBody ProducerPostRequest producerPostRequest, @RequestHeader HttpHeaders headers) {
         log.info("{}", headers);
 
