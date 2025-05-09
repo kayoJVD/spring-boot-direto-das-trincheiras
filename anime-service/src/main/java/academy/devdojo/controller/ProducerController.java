@@ -10,6 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 
@@ -42,26 +43,10 @@ public class ProducerController {
                 .filter(producer -> producer.getId().equals(id))
                 .findFirst()
                 .map(MAPPER::toProducerGetResponse)
-                .orElse(null);
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Producer not found"));;
 
         return ResponseEntity.ok(producerGetResponse);
     }
-
-
-//    @GetMapping
-//    public List<Producer> listall(@RequestParam(required = false) String name) {
-//
-//        var producers = Producer.producerList();
-//        if (name == null) return producers;
-//
-//        return producers.stream().filter(producer -> producer.getName().equalsIgnoreCase(name)).toList();
-//    }
-//
-//    @GetMapping("{id}")
-//    public Producer findById(@PathVariable Long id) {
-//        return Producer.producerList().stream().filter(producer -> producer.getId().equals(id))
-//                .findFirst().orElse(null);
-//    }
 
 
     @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE,
@@ -73,19 +58,24 @@ public class ProducerController {
 
         var response = MAPPER.toProducerGetResponse(producer);
 
-//        Producer producer = Producer.builder()
-//                .id(ThreadLocalRandom.current().nextLong(100_000))
-//                .name(producerPostRequest.getName())
-//                .createdAt(LocalDateTime.now()).build();
 
         Producer.producerList().add(producer);
 
-//        var response = ProducerGetResponse.builder()
-//                .id(producer.getId())
-//                .name(producer.getName())
-//                .creatdAt(producer.getCreatedAt()).build();
-
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
+
+    @DeleteMapping("{id}")
+    public ResponseEntity<Void> deleteById(@PathVariable Long id){
+        log.debug("Request to delete producer by id: {}", id);
+        Producer producerToDelete = Producer.producerList()
+                .stream()
+                .filter(producer -> producer.getId().equals(id))
+                .findFirst()
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Producer not found"));
+
+        Producer.producerList().remove(producerToDelete);
+        return ResponseEntity.noContent().build();
+    }
+
 
 }
