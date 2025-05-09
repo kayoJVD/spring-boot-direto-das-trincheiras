@@ -2,7 +2,7 @@ package academy.devdojo.mapper;
 
 import academy.devdojo.domain.Producer;
 import academy.devdojo.request.ProducerPostRequest;
-import academy.devdojo.responde.ProducerGetResponse;
+import academy.devdojo.response.ProducerGetResponse;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
