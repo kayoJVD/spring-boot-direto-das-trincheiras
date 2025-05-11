@@ -12,5 +12,4 @@ import java.time.LocalDateTime;
 public class ProducerPutRequest {
     private Long id;
     private String name;
-    private LocalDateTime createdAt = LocalDateTime.now();
 }

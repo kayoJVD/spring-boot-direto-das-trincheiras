@@ -44,7 +44,7 @@ public class ProducerController {
                 .filter(producer -> producer.getId().equals(id))
                 .findFirst()
                 .map(MAPPER::toProducerGetResponse)
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Producer not found"));;
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Producer not found"));
 
         return ResponseEntity.ok(producerGetResponse);
     }
@@ -88,7 +88,7 @@ public class ProducerController {
                 .findFirst()
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Producer not found"));
 
-        Producer producer = MAPPER.toProducer(request);
+        Producer producer = MAPPER.toProducer(request, producerNotFound.getCreatedAt());
 
         Producer.producerList().remove(producerNotFound);
         Producer.producerList().add(producer);
