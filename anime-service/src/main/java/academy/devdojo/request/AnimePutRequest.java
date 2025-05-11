@@ -1,16 +1,13 @@
-package academy.devdojo.response;
+package academy.devdojo.request;
 
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.time.LocalDateTime;
-
 @Getter
 @Setter
 @Builder
-public class ProducerGetResponse {
+public class AnimePutRequest {
     private Long id;
     private String name;
-    private LocalDateTime createdAt;
 }
