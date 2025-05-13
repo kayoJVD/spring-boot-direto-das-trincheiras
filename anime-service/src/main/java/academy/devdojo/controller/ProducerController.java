@@ -5,6 +5,7 @@ import academy.devdojo.mapper.ProducerMapper;
 import academy.devdojo.request.ProducerPostRequest;
 import academy.devdojo.request.ProducerPutRequest;
 import academy.devdojo.response.ProducerGetResponse;
+import academy.devdojo.response.ProducerPostResponse;
 import academy.devdojo.service.ProducerService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpHeaders;
@@ -52,14 +53,14 @@ public class ProducerController {
 
     @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE,
             headers = "x-api-key")
-    public ResponseEntity<ProducerGetResponse> save(@RequestBody ProducerPostRequest producerPostRequest, @RequestHeader HttpHeaders headers) {
+    public ResponseEntity<ProducerPostResponse> save(@RequestBody ProducerPostRequest producerPostRequest, @RequestHeader HttpHeaders headers) {
         log.info("{}", headers);
 
         var producer = MAPPER.toProducer(producerPostRequest);
 
         Producer producerSaved = service.save(producer);
 
-        var producerGetResponse = MAPPER.toProducerGetResponse(producerSaved);
+        var producerGetResponse = MAPPER.toProducerPostResponse(producerSaved);
 
 
         return ResponseEntity.status(HttpStatus.CREATED).body(producerGetResponse);

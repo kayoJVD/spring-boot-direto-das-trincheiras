@@ -1,12 +1,14 @@
 package academy.devdojo.repository;
 
 import academy.devdojo.domain.Producer;
+import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+@Component
 public class ProducerHardCodeRepository {
 
     private static final List<Producer> PRODUCERS = new ArrayList<>();
