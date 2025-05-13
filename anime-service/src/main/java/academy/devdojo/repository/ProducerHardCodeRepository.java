@@ -1,14 +1,14 @@
 package academy.devdojo.repository;
 
 import academy.devdojo.domain.Producer;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-@Component
+@Repository
 public class ProducerHardCodeRepository {
 
     private static final List<Producer> PRODUCERS = new ArrayList<>();
@@ -23,24 +23,24 @@ public class ProducerHardCodeRepository {
         return PRODUCERS;
     }
 
-    public Optional<Producer> findById(Long id){
+    public Optional<Producer> findById(Long id) {
         return PRODUCERS.stream().filter(producer -> producer.getId().equals(id)).findFirst();
     }
 
-    public List<Producer> findByName(String name){
+    public List<Producer> findByName(String name) {
         return PRODUCERS.stream().filter(producer -> producer.getName().equals(name)).toList();
     }
 
-    public Producer save (Producer producer){
-         PRODUCERS.add(producer);
+    public Producer save(Producer producer) {
+        PRODUCERS.add(producer);
         return producer;
     }
 
-    public void delete(Producer producer){
+    public void delete(Producer producer) {
         PRODUCERS.remove(producer);
     }
 
-    public void update (Producer producer){
+    public void update(Producer producer) {
         delete(producer);
         save(producer);
     }
