@@ -4,11 +4,8 @@ import academy.devdojo.domain.Producer;
 import external.dependency.Connection;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;
 
-import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -17,35 +14,31 @@ import java.util.Optional;
 @Log4j2
 public class ProducerHardCodeRepository {
 
-    private static final List<Producer> PRODUCERS = new ArrayList<>();
+
+    private final ProducerData producerData;
+
     private final Connection connection;
 
-    static {
-        PRODUCERS.add(Producer.builder().id(1L).name("Mappa").createdAt(LocalDateTime.now()).build());
-        PRODUCERS.add(Producer.builder().id(2L).name("Kyoto Animation").createdAt(LocalDateTime.now()).build());
-        PRODUCERS.add(Producer.builder().id(3L).name("Madhouse").createdAt(LocalDateTime.now()).build());
-    }
-
     public List<Producer> findAll() {
-        return PRODUCERS;
+        return producerData.getProducers();
     }
 
     public Optional<Producer> findById(Long id) {
-        return PRODUCERS.stream().filter(producer -> producer.getId().equals(id)).findFirst();
+        return producerData.getProducers().stream().filter(producer -> producer.getId().equals(id)).findFirst();
     }
 
     public List<Producer> findByName(String name) {
         log.debug(connection);
-        return PRODUCERS.stream().filter(producer -> producer.getName().equals(name)).toList();
+        return producerData.getProducers().stream().filter(producer -> producer.getName().equals(name)).toList();
     }
 
     public Producer save(Producer producer) {
-        PRODUCERS.add(producer);
+        producerData.getProducers().add(producer);
         return producer;
     }
 
     public void delete(Producer producer) {
-        PRODUCERS.remove(producer);
+        producerData.getProducers().remove(producer);
     }
 
     public void update(Producer producer) {
