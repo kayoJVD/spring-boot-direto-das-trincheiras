@@ -35,6 +35,7 @@ public class AnimeService {
         assertAnimeExists(animeToUpdate.getId());
         repository.update(animeToUpdate);
     }
+
     public void assertAnimeExists(Long id){
         animeByIdOrThrowNotFound(id);
     }

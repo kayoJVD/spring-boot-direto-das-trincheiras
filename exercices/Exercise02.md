@@ -1,3 +1,4 @@
+# Exercise 02 Create a class Anime
 create a class called Anime, 
 inside a package called domain, 
 with the following attributes: long id,
