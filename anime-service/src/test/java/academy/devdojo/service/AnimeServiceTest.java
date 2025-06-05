@@ -120,14 +120,14 @@ class AnimeServiceTest {
     }
 
     @Test
-    @DisplayName("Throw exception ResponseStatusException anime not found")
+    @DisplayName(" delete throw exception ResponseStatusException anime not found")
     @Order(8)
-    void throwException_WhenAnime_NotFound() {
+    void delete_throwResponseStatusException_WhenAnime_NotFound() {
         Anime animeToException = animeList.getFirst();
         BDDMockito.when(repository.findById(animeToException.getId())).thenReturn(Optional.empty());
 
 
-        Assertions.assertThatThrownBy(() -> service.delete(animeToException.getId())).isInstanceOf(ResponseStatusException.class);
+        Assertions.assertThatException().isThrownBy(() -> service.delete(animeToException.getId())).isInstanceOf(ResponseStatusException.class);
     }
 
     @Test
