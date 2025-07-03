@@ -5,24 +5,201 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e81a9097-1e39-4b7c-91eb-fb213c7be312" name="Changes" comment="video40,41,42,43,44:">
+      <change afterPath="$PROJECT_DIR$/anime-service/src/test/java/academy/devdojo/controller/AnimeControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/anime-service/src/test/resources/anime/get-anime-by-id-name-200.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/anime-service/src/test/resources/anime/get-anime-null-name-200.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/anime-service/src/test/resources/anime/get-anime-soloLeveling-name-200.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/anime-service/src/test/resources/anime/get-anime-x-name-200.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/anime-service/src/test/resources/anime/post-request-anime-200.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/anime-service/src/test/resources/anime/post-response-anime-201.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/anime-service/src/test/resources/producer/get-producer-null-name-200.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercices/Exercise11.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/anime-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime-service/src/main/java/academy/devdojo/controller/AnimeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/anime-service/src/main/java/academy/devdojo/controller/AnimeController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;kayoJVD&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:kayoJVD/spring-boot-direto-das-trincheiras.git&quot;,
+    &quot;accountId&quot;: &quot;45674ccd-2a94-4110-8689-d6cadf7f519f&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2y8nO2fYyRTkI7PyT9SWBuiPvPK" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "git-widget-placeholder": "main"
+    "JUnit.AnimeControllerTest.findAll_ReturnsAllAnimes_WhenArgumentIsNull.executor": "Run",
+    "JUnit.AnimeControllerTest.findById_ReturnsProducersById_WhenSuccesful.executor": "Run",
+    "JUnit.AnimeControllerTest.findById_ThrowsResponseStatusException_WhenAnimeIsNotFound.executor": "Run",
+    "JUnit.AnimeControllerTest.findById_ThrowsResponseStatusException_WhenProducerIsNotFound.executor": "Run",
+    "JUnit.AnimeControllerTest.findByName_ReturnsEmptyList_WhenNameIsNotFound.executor": "Run",
+    "JUnit.AnimeControllerTest.findByName_ReturnsFoundAnimeList_WhenNameIsFound.executor": "Run",
+    "JUnit.AnimeControllerTest.save_CreatesAnime_WhenSuccessful.executor": "Run",
+    "JUnit.AnimeServiceApplicationTests.executor": "Run",
+    "JUnit.ProducerControllerTest.executor": "Run",
+    "JUnit.ProducerControllerTest.findAll_ReturnsAllProducers_WhenNameIsNull.executor": "Run",
+    "JUnit.ProducerControllerTest.findById_ThrowsResponseStatusException_WhenProducerIsNotFound.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Kayo Alves/IdeaProjects/spring-boot-direto-das-trincheiras/exercices",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.propCompiler"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Kayo Alves\IdeaProjects\spring-boot-direto-das-trincheiras\exercices" />
+      <recent name="C:\Users\Kayo Alves\IdeaProjects\spring-boot-direto-das-trincheiras\anime-service\src\test\resources\anime" />
+      <recent name="C:\Users\Kayo Alves\IdeaProjects\spring-boot-direto-das-trincheiras\anime-service\src\test\resources\producer" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="academy.devdojo.controller" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.AnimeControllerTest.save_CreatesAnime_WhenSuccessful">
+    <configuration name="AnimeControllerTest.findById_ReturnsProducersById_WhenSuccesful" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="anime-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="academy.devdojo.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="academy.devdojo.controller" />
+      <option name="MAIN_CLASS_NAME" value="academy.devdojo.controller.AnimeControllerTest" />
+      <option name="METHOD_NAME" value="findById_ReturnsProducersById_WhenSuccesful" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AnimeControllerTest.findById_ThrowsResponseStatusException_WhenAnimeIsNotFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="anime-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="academy.devdojo.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="academy.devdojo.controller" />
+      <option name="MAIN_CLASS_NAME" value="academy.devdojo.controller.AnimeControllerTest" />
+      <option name="METHOD_NAME" value="findById_ThrowsResponseStatusException_WhenAnimeIsNotFound" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AnimeControllerTest.findById_ThrowsResponseStatusException_WhenProducerIsNotFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="anime-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="academy.devdojo.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="academy.devdojo.controller" />
+      <option name="MAIN_CLASS_NAME" value="academy.devdojo.controller.AnimeControllerTest" />
+      <option name="METHOD_NAME" value="findById_ThrowsResponseStatusException_WhenProducerIsNotFound" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AnimeControllerTest.save_CreatesAnime_WhenSuccessful" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="anime-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="academy.devdojo.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="academy.devdojo.controller" />
+      <option name="MAIN_CLASS_NAME" value="academy.devdojo.controller.AnimeControllerTest" />
+      <option name="METHOD_NAME" value="save_CreatesAnime_WhenSuccessful" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProducerControllerTest.findById_ThrowsResponseStatusException_WhenProducerIsNotFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="anime-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="academy.devdojo.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="academy.devdojo.controller" />
+      <option name="MAIN_CLASS_NAME" value="academy.devdojo.controller.ProducerControllerTest" />
+      <option name="METHOD_NAME" value="findById_ThrowsResponseStatusException_WhenProducerIsNotFound" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.AnimeControllerTest.findById_ReturnsProducersById_WhenSuccesful" />
+      <item itemvalue="JUnit.AnimeControllerTest.findById_ThrowsResponseStatusException_WhenAnimeIsNotFound" />
+      <item itemvalue="JUnit.AnimeControllerTest.findById_ThrowsResponseStatusException_WhenProducerIsNotFound" />
+      <item itemvalue="JUnit.AnimeControllerTest.save_CreatesAnime_WhenSuccessful" />
+      <item itemvalue="JUnit.ProducerControllerTest.findById_ThrowsResponseStatusException_WhenProducerIsNotFound" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.AnimeControllerTest.save_CreatesAnime_WhenSuccessful" />
+        <item itemvalue="JUnit.AnimeControllerTest.findById_ThrowsResponseStatusException_WhenAnimeIsNotFound" />
+        <item itemvalue="JUnit.ProducerControllerTest.findById_ThrowsResponseStatusException_WhenProducerIsNotFound" />
+        <item itemvalue="JUnit.AnimeControllerTest.findById_ThrowsResponseStatusException_WhenProducerIsNotFound" />
+        <item itemvalue="JUnit.AnimeControllerTest.findById_ReturnsProducersById_WhenSuccesful" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e81a9097-1e39-4b7c-91eb-fb213c7be312" name="Changes" comment="video40,41,42,43,44:" />
+      <created>1749225037021</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1749225037021</updated>
+    </task>
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
