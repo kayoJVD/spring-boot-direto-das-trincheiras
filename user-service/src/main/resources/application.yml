@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: user-service
+  threads:
+    virtual:
+      enabled: true
+
+logging:
+  level:
+    academy.devdojo: debug
+
+server:
+  port: 8090
+  servlet:
+    context-path: /
+  error:
+    include-stacktrace: NEVER
+
+  tomcat:
+    threads:
+      max: 20
+
+
+
+
+
+

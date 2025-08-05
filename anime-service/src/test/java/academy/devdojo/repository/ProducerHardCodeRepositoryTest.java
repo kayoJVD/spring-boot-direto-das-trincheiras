@@ -1,5 +1,6 @@
 package academy.devdojo.repository;
 
+import academy.devdojo.commons.ProducerUtils;
 import academy.devdojo.domain.Producer;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -12,8 +13,6 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -25,13 +24,13 @@ class ProducerHardCodeRepositoryTest {
     @Mock
     private ProducerData producerData;
     private List<Producer> producerList;
+    @InjectMocks
+    private ProducerUtils producerUtils;
 
     @BeforeEach
     void init() {
-        Producer ufotable = Producer.builder().id(1L).name("Ufotable").createdAt(LocalDateTime.now()).build();
-        Producer witStudio = Producer.builder().id(2L).name("Wit Studio").createdAt(LocalDateTime.now()).build();
-        Producer studioGhibli = Producer.builder().id(3L).name("Studio Ghibli").createdAt(LocalDateTime.now()).build();
-        producerList = new ArrayList<>(List.of(ufotable, witStudio, studioGhibli));
+
+        producerList = producerUtils.newProducerList();
     }
 
     @Test
@@ -82,7 +81,7 @@ class ProducerHardCodeRepositoryTest {
     void save_CreatesProducer_WhenSuccessful() {
         BDDMockito.when(producerData.getProducers()).thenReturn(producerList);
 
-        var producerToSave = Producer.builder().id(99L).name("MAPPA").createdAt(LocalDateTime.now()).build();
+        var producerToSave = producerUtils.newProducerToSave();
         var producer = repository.save(producerToSave);
 
         Assertions.assertThat(producer).isEqualTo(producerToSave).hasNoNullFieldsOrProperties();
@@ -96,7 +95,7 @@ class ProducerHardCodeRepositoryTest {
     @Test
     @DisplayName("delete removes a producer")
     @Order(6)
-    void delete_RemoveProducer_WhemSuccessful() {
+    void delete_RemoveProducer_WhenSuccessful() {
         BDDMockito.when(producerData.getProducers()).thenReturn(producerList);
 
         var producerToDelete = producerList.getFirst();

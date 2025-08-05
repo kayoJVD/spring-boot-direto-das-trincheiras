@@ -1,4 +1,6 @@
 spring:
+  profiles:
+    active: mysql
   application:
     name: anime-service
   threads:
@@ -18,3 +20,8 @@ server:
   tomcat:
     threads:
       max: 20
+
+
+
+
+

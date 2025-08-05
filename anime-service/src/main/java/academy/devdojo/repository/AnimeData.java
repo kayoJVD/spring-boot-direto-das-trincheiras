@@ -10,13 +10,13 @@ import java.util.List;
 public class AnimeData {
     private final List<Anime> animes = new ArrayList<>();
 
-     {
+    {
 
-         Anime hxh = new Anime(1L, "HxH");
-         Anime onePiece = new Anime(2L, "One Piece");
-         Anime kimetsu = new Anime(3L, "Kimetsu");
-         animes.addAll(List.of(hxh, onePiece, kimetsu));
-     }
+        Anime hxh = new Anime(1L, "HxH");
+        Anime onePiece = new Anime(2L, "One Piece");
+        Anime kimetsu = new Anime(3L, "Kimetsu");
+        animes.addAll(List.of(hxh, onePiece, kimetsu));
+    }
 
 
     public List<Anime> getAnimes() {

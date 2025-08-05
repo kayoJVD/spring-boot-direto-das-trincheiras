@@ -21,7 +21,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class AnimeController {
 
-    private  final AnimeMapper mapper;
+    private final AnimeMapper mapper;
     private final AnimeService service;
 
     @GetMapping
@@ -59,7 +59,7 @@ public class AnimeController {
     }
 
     @DeleteMapping("{id}")
-    public ResponseEntity<Void> deleteById(@PathVariable Long id){
+    public ResponseEntity<Void> deleteById(@PathVariable Long id) {
         log.debug("Request to delete anime by id: {}", id);
 
         service.delete(id);
@@ -68,7 +68,7 @@ public class AnimeController {
     }
 
     @PutMapping
-    public ResponseEntity<Void> update(@RequestBody AnimePutRequest request){
+    public ResponseEntity<Void> update(@RequestBody AnimePutRequest request) {
         log.debug("Request to update anime: {}", request);
 
         var animeUpdate = mapper.toAnime(request);

@@ -5,19 +5,61 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e81a9097-1e39-4b7c-91eb-fb213c7be312" name="Changes" comment="video40,41,42,43,44:">
-      <change afterPath="$PROJECT_DIR$/anime-service/src/test/java/academy/devdojo/controller/AnimeControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/anime-service/src/test/resources/anime/get-anime-by-id-name-200.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/anime-service/src/test/resources/anime/get-anime-null-name-200.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/anime-service/src/test/resources/anime/get-anime-soloLeveling-name-200.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/anime-service/src/test/resources/anime/get-anime-x-name-200.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/anime-service/src/test/resources/anime/post-request-anime-200.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/anime-service/src/test/resources/anime/post-response-anime-201.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/anime-service/src/test/resources/producer/get-producer-null-name-200.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercices/Exercise11.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/anime-service/src/main/java/academy/devdojo/config/ConnectionConfigurationProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/anime-service/src/main/java/academy/devdojo/controller/ConnectionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/anime-service/src/main/resources/application-mysql.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/anime-service/src/test/java/academy/devdojo/commons/AnimeUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/anime-service/src/test/java/academy/devdojo/commons/FileUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/anime-service/src/test/java/academy/devdojo/commons/ProducerUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/anime-service/src/test/resources/application-test.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercices/Exercise12.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/academy/devdojo/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/academy/devdojo/domain/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/academy/devdojo/mapper/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/academy/devdojo/repository/UserData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/academy/devdojo/repository/UserHardCodeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/academy/devdojo/request/UserPostRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/academy/devdojo/request/UserPutRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/academy/devdojo/response/UserGetResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/academy/devdojo/response/UserPostResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/academy/devdojo/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/test/java/academy/devdojo/commons/UserUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/test/java/academy/devdojo/controller/UserControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/test/java/academy/devdojo/repository/UserHardCodeRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/test/java/academy/devdojo/service/UserServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/test/resources/user/get-users-by-id-200.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/test/resources/user/get-users-null-name-200.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/test/resources/user/get-users-param-name-200.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/test/resources/user/get-users-param-name-notFound-200.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/test/resources/user/post-request-user-200.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/test/resources/user/post-response-user-201.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/test/resources/user/put-request-user-200.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/test/resources/user/put-request-user-404.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/anime-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/anime-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime-service/src/main/java/academy/devdojo/AnimeServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/anime-service/src/main/java/academy/devdojo/AnimeServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime-service/src/main/java/academy/devdojo/config/ConnectionConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/anime-service/src/main/java/academy/devdojo/config/ConnectionConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/anime-service/src/main/java/academy/devdojo/controller/AnimeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/anime-service/src/main/java/academy/devdojo/controller/AnimeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime-service/src/main/java/academy/devdojo/controller/ProducerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/anime-service/src/main/java/academy/devdojo/controller/ProducerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime-service/src/main/java/academy/devdojo/domain/Anime.java" beforeDir="false" afterPath="$PROJECT_DIR$/anime-service/src/main/java/academy/devdojo/domain/Anime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime-service/src/main/java/academy/devdojo/domain/Producer.java" beforeDir="false" afterPath="$PROJECT_DIR$/anime-service/src/main/java/academy/devdojo/domain/Producer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime-service/src/main/java/academy/devdojo/repository/AnimeData.java" beforeDir="false" afterPath="$PROJECT_DIR$/anime-service/src/main/java/academy/devdojo/repository/AnimeData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime-service/src/main/java/academy/devdojo/repository/ProducerData.java" beforeDir="false" afterPath="$PROJECT_DIR$/anime-service/src/main/java/academy/devdojo/repository/ProducerData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime-service/src/main/java/academy/devdojo/request/ProducerPutRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/anime-service/src/main/java/academy/devdojo/request/ProducerPutRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime-service/src/main/java/academy/devdojo/service/AnimeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/anime-service/src/main/java/academy/devdojo/service/AnimeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime-service/src/main/java/academy/devdojo/service/ProducerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/anime-service/src/main/java/academy/devdojo/service/ProducerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime-service/src/main/java/external/dependency/Connection.java" beforeDir="false" afterPath="$PROJECT_DIR$/anime-service/src/main/java/external/dependency/Connection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/anime-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime-service/src/test/java/academy/devdojo/AnimeServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/anime-service/src/test/java/academy/devdojo/AnimeServiceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime-service/src/test/java/academy/devdojo/controller/AnimeControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/anime-service/src/test/java/academy/devdojo/controller/AnimeControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime-service/src/test/java/academy/devdojo/controller/ProducerControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/anime-service/src/test/java/academy/devdojo/controller/ProducerControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime-service/src/test/java/academy/devdojo/repository/AnimeHardCodeRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/anime-service/src/test/java/academy/devdojo/repository/AnimeHardCodeRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime-service/src/test/java/academy/devdojo/repository/ProducerHardCodeRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/anime-service/src/test/java/academy/devdojo/repository/ProducerHardCodeRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime-service/src/test/java/academy/devdojo/service/AnimeServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/anime-service/src/test/java/academy/devdojo/service/AnimeServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime-service/src/test/java/academy/devdojo/service/ProducerServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/anime-service/src/test/java/academy/devdojo/service/ProducerServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +69,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="AnnotationType" />
+        <option value="Class" />
         <option value="JUnit5 Test Class" />
       </list>
     </option>
@@ -57,6 +101,9 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.AnimeServiceApplication.executor": "Debug",
+    "Application.UserServiceApplication.executor": "Run",
+    "JUnit.AnimeControllerTest.executor": "Run",
     "JUnit.AnimeControllerTest.findAll_ReturnsAllAnimes_WhenArgumentIsNull.executor": "Run",
     "JUnit.AnimeControllerTest.findById_ReturnsProducersById_WhenSuccesful.executor": "Run",
     "JUnit.AnimeControllerTest.findById_ThrowsResponseStatusException_WhenAnimeIsNotFound.executor": "Run",
@@ -64,101 +111,108 @@
     "JUnit.AnimeControllerTest.findByName_ReturnsEmptyList_WhenNameIsNotFound.executor": "Run",
     "JUnit.AnimeControllerTest.findByName_ReturnsFoundAnimeList_WhenNameIsFound.executor": "Run",
     "JUnit.AnimeControllerTest.save_CreatesAnime_WhenSuccessful.executor": "Run",
+    "JUnit.AnimeHardCodeRepositoryTest.executor": "Run",
     "JUnit.AnimeServiceApplicationTests.executor": "Run",
+    "JUnit.AnimeServiceTest.executor": "Run",
     "JUnit.ProducerControllerTest.executor": "Run",
     "JUnit.ProducerControllerTest.findAll_ReturnsAllProducers_WhenNameIsNull.executor": "Run",
     "JUnit.ProducerControllerTest.findById_ThrowsResponseStatusException_WhenProducerIsNotFound.executor": "Run",
+    "JUnit.ProducerHardCodeRepositoryTest.delete_RemoveProducer_WhenSuccessful.executor": "Run",
+    "JUnit.ProducerHardCodeRepositoryTest.executor": "Run",
+    "JUnit.ProducerHardCodeRepositoryTest.save_CreatesProducer_WhenSuccessful.executor": "Run",
+    "JUnit.ProducerServiceTest.executor": "Run",
+    "JUnit.UserControllerTest.delete_RemoveUser_WhenSuccessful.executor": "Run",
+    "JUnit.UserControllerTest.delete_ThrowResponseStatusException_WhenNotFound.executor": "Run",
+    "JUnit.UserControllerTest.executor": "Run",
+    "JUnit.UserControllerTest.findAll_ReturnsAllUsers_WhenArgumentIsNull.executor": "Run",
+    "JUnit.UserControllerTest.findAll_ReturnsEmptyList_WhenNameIsNotFound.executor": "Debug",
+    "JUnit.UserControllerTest.findAll_ReturnsUserInList_WhenNameIsFound.executor": "Run",
+    "JUnit.UserControllerTest.findById_ReturnsUserGivenId_WhenSuccessful.executor": "Debug",
+    "JUnit.UserControllerTest.save_CreatedAUser_WhenSuccessful.executor": "Debug",
+    "JUnit.UserControllerTest.update_ThrowResponseStatusException_WhenNotFound.executor": "Run",
+    "JUnit.UserControllerTest.update_UpdateUser_WhenSuccessful.executor": "Debug",
+    "JUnit.UserHardCodeRepositoryTest.delete_DeleteUser_WhenSuccessful.executor": "Run",
+    "JUnit.UserHardCodeRepositoryTest.delete_RemoveProducer_WhenSuccessful.executor": "Run",
+    "JUnit.UserHardCodeRepositoryTest.executor": "Run",
+    "JUnit.UserHardCodeRepositoryTest.findAll_ReturnsAllUsers_WhenSuccessful.executor": "Run",
+    "JUnit.UserHardCodeRepositoryTest.findByName_ReturnUserEmpetyList_WhenNameIsNull.executor": "Run",
+    "JUnit.UserHardCodeRepositoryTest.findByName_ReturnUserName_WhenFoundName.executor": "Run",
+    "JUnit.UserHardCodeRepositoryTest.save_CreatesUser_WhenSuccessful.executor": "Run",
+    "JUnit.UserHardCodeRepositoryTest.update_UpdateUser_WhenSuccessful.executor": "Debug",
+    "JUnit.UserServiceApplicationTests.executor": "Run",
+    "JUnit.UserServiceTest.delete_RemoveAUser_WhenSuccessful.executor": "Run",
+    "JUnit.UserServiceTest.delete_ThrowsResponseStatusException_WhenIdNotFound.executor": "Run",
+    "JUnit.UserServiceTest.delete_ThrowsResponseStatusException_WhenUserNotFound.executor": "Run",
+    "JUnit.UserServiceTest.findAll_ReturnsAllUsers_WhenArgumentIsNull.executor": "Run",
+    "JUnit.UserServiceTest.findAll_ReturnsEmptyList_WhenNameIsNotFound.executor": "Run",
+    "JUnit.UserServiceTest.findAll_ReturnsUserInList_WhenNameIsFound.executor": "Run",
+    "JUnit.UserServiceTest.findAll_ReturnsUser_WhenNameIsFound.executor": "Run",
+    "JUnit.UserServiceTest.findById_ReturnResponseStatusException_WhenIdNotFound.executor": "Run",
+    "JUnit.UserServiceTest.findById_ReturnsUserGivenId_WhenSuccessful.executor": "Run",
+    "JUnit.UserServiceTest.save_CreateAUser_WhenSuccessful.executor": "Run",
+    "JUnit.UserServiceTest.update_ThrowsResponseStatusException_WhenUserNotFound.executor": "Run",
+    "JUnit.UserServiceTest.update_UpdatesUser_WhenSuccessful.executor": "Debug",
+    "JUnit.academy.devdojo in user-service.executor": "Run",
+    "JUnit.controller in anime-service.executor": "Run",
+    "JUnit.devdojo in anime-service (1).executor": "Run",
+    "JUnit.devdojo in anime-service.executor": "Run",
+    "JUnit.java in anime-service.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Kayo Alves/IdeaProjects/spring-boot-direto-das-trincheiras/exercices",
+    "last_opened_file_path": "C:/Users/Kayo Alves/IdeaProjects/spring-boot-direto-das-trincheiras/user-service/src/test/resources",
     "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.propCompiler"
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="academy.devdojo.user-service.src.test.java.academy.devdojo" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Kayo Alves\IdeaProjects\spring-boot-direto-das-trincheiras\exercices" />
-      <recent name="C:\Users\Kayo Alves\IdeaProjects\spring-boot-direto-das-trincheiras\anime-service\src\test\resources\anime" />
-      <recent name="C:\Users\Kayo Alves\IdeaProjects\spring-boot-direto-das-trincheiras\anime-service\src\test\resources\producer" />
+      <recent name="C:\Users\Kayo Alves\IdeaProjects\spring-boot-direto-das-trincheiras\user-service\src\test\resources" />
+      <recent name="C:\Users\Kayo Alves\IdeaProjects\spring-boot-direto-das-trincheiras\user-service\src\test\resources\user" />
+      <recent name="C:\Users\Kayo Alves\IdeaProjects\spring-boot-direto-das-trincheiras" />
+      <recent name="C:\Users\Kayo Alves\IdeaProjects\spring-boot-direto-das-trincheiras\anime-service\src\main\java\academy\devdojo" />
+      <recent name="C:\Users\Kayo Alves\IdeaProjects\spring-boot-direto-das-trincheiras\anime-service\src\test\resources" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Kayo Alves\IdeaProjects\spring-boot-direto-das-trincheiras\user-service\src\test\resources\user" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="academy.devdojo.controller" />
+      <recent name="academy.devdojo.service" />
+      <recent name="academy.devdojo.repository" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="academy.devdojo.request" />
+      <recent name="academy.devdojo.response" />
+      <recent name="academy.devdojo.controller" />
+      <recent name="academy.devdojo.commons" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AnimeControllerTest.save_CreatesAnime_WhenSuccessful">
-    <configuration name="AnimeControllerTest.findById_ReturnsProducersById_WhenSuccesful" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="anime-service" />
+  <component name="RunManager" selected="Application.UserServiceApplication">
+    <configuration name="UserServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="academy.devdojo.UserServiceApplication" />
+      <module name="user-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="academy.devdojo.controller.*" />
+          <option name="PATTERN" value="academy.devdojo.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="academy.devdojo.controller" />
-      <option name="MAIN_CLASS_NAME" value="academy.devdojo.controller.AnimeControllerTest" />
-      <option name="METHOD_NAME" value="findById_ReturnsProducersById_WhenSuccesful" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AnimeControllerTest.findById_ThrowsResponseStatusException_WhenAnimeIsNotFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="anime-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="academy.devdojo.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="academy.devdojo.controller" />
-      <option name="MAIN_CLASS_NAME" value="academy.devdojo.controller.AnimeControllerTest" />
-      <option name="METHOD_NAME" value="findById_ThrowsResponseStatusException_WhenAnimeIsNotFound" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AnimeControllerTest.findById_ThrowsResponseStatusException_WhenProducerIsNotFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="anime-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="academy.devdojo.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="academy.devdojo.controller" />
-      <option name="MAIN_CLASS_NAME" value="academy.devdojo.controller.AnimeControllerTest" />
-      <option name="METHOD_NAME" value="findById_ThrowsResponseStatusException_WhenProducerIsNotFound" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AnimeControllerTest.save_CreatesAnime_WhenSuccessful" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="anime-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="academy.devdojo.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="academy.devdojo.controller" />
-      <option name="MAIN_CLASS_NAME" value="academy.devdojo.controller.AnimeControllerTest" />
-      <option name="METHOD_NAME" value="save_CreatesAnime_WhenSuccessful" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProducerControllerTest.findById_ThrowsResponseStatusException_WhenProducerIsNotFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProducerControllerTest.findAll_ReturnsAllProducers_WhenNameIsNull" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="anime-service" />
       <extension name="coverage">
         <pattern>
@@ -168,26 +222,88 @@
       </extension>
       <option name="PACKAGE_NAME" value="academy.devdojo.controller" />
       <option name="MAIN_CLASS_NAME" value="academy.devdojo.controller.ProducerControllerTest" />
-      <option name="METHOD_NAME" value="findById_ThrowsResponseStatusException_WhenProducerIsNotFound" />
+      <option name="METHOD_NAME" value="findAll_ReturnsAllProducers_WhenNameIsNull" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-Dspring.profiles.active=test" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="user-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="academy.devdojo.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="academy.devdojo.controller" />
+      <option name="MAIN_CLASS_NAME" value="academy.devdojo.controller.UserControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserControllerTest.delete_ThrowResponseStatusException_WhenNotFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="user-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="academy.devdojo.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="academy.devdojo.controller" />
+      <option name="MAIN_CLASS_NAME" value="academy.devdojo.controller.UserControllerTest" />
+      <option name="METHOD_NAME" value="delete_ThrowResponseStatusException_WhenNotFound" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UserServiceApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="user-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="academy.devdojo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="academy.devdojo" />
+      <option name="MAIN_CLASS_NAME" value="academy.devdojo.UserServiceApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="academy.devdojo in user-service" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="user-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="academy.devdojo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="academy.devdojo" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="JUnit.AnimeControllerTest.findById_ReturnsProducersById_WhenSuccesful" />
-      <item itemvalue="JUnit.AnimeControllerTest.findById_ThrowsResponseStatusException_WhenAnimeIsNotFound" />
-      <item itemvalue="JUnit.AnimeControllerTest.findById_ThrowsResponseStatusException_WhenProducerIsNotFound" />
-      <item itemvalue="JUnit.AnimeControllerTest.save_CreatesAnime_WhenSuccessful" />
-      <item itemvalue="JUnit.ProducerControllerTest.findById_ThrowsResponseStatusException_WhenProducerIsNotFound" />
+      <item itemvalue="Application.UserServiceApplication" />
+      <item itemvalue="JUnit.ProducerControllerTest.findAll_ReturnsAllProducers_WhenNameIsNull" />
+      <item itemvalue="JUnit.UserControllerTest.delete_ThrowResponseStatusException_WhenNotFound" />
+      <item itemvalue="JUnit.UserServiceApplicationTests" />
+      <item itemvalue="JUnit.academy.devdojo in user-service" />
+      <item itemvalue="JUnit.UserControllerTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AnimeControllerTest.save_CreatesAnime_WhenSuccessful" />
-        <item itemvalue="JUnit.AnimeControllerTest.findById_ThrowsResponseStatusException_WhenAnimeIsNotFound" />
-        <item itemvalue="JUnit.ProducerControllerTest.findById_ThrowsResponseStatusException_WhenProducerIsNotFound" />
-        <item itemvalue="JUnit.AnimeControllerTest.findById_ThrowsResponseStatusException_WhenProducerIsNotFound" />
-        <item itemvalue="JUnit.AnimeControllerTest.findById_ReturnsProducersById_WhenSuccesful" />
+        <item itemvalue="Application.UserServiceApplication" />
+        <item itemvalue="JUnit.academy.devdojo in user-service" />
+        <item itemvalue="JUnit.UserServiceApplicationTests" />
+        <item itemvalue="JUnit.UserControllerTest" />
+        <item itemvalue="JUnit.UserControllerTest.delete_ThrowResponseStatusException_WhenNotFound" />
       </list>
     </recent_temporary>
   </component>
@@ -205,5 +321,12 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="video40,41,42,43,44:" />
     <option name="LAST_COMMIT_MESSAGE" value="video40,41,42,43,44:" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="((UserService)((UserController)this).service).repository" custom="academy.devdojo.service.UserService,academy.devdojo.controller.UserController" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

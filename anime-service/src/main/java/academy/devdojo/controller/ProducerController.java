@@ -23,7 +23,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ProducerController {
 
-    private  final ProducerMapper mapper;
+    private final ProducerMapper mapper;
 
     private final ProducerService service;
 
@@ -66,7 +66,7 @@ public class ProducerController {
     }
 
     @DeleteMapping("{id}")
-    public ResponseEntity<Void> deleteById(@PathVariable Long id){
+    public ResponseEntity<Void> deleteById(@PathVariable Long id) {
         log.debug("Request to delete producer by id: {}", id);
 
         service.delete(id);
@@ -75,8 +75,8 @@ public class ProducerController {
     }
 
     @PutMapping
-    public ResponseEntity<Void> update (@RequestBody ProducerPutRequest request){
-        log.debug("Request to update procuer: {}", request);
+    public ResponseEntity<Void> update(@RequestBody ProducerPutRequest request) {
+        log.debug("Request to update producer: {}", request);
 
 
         Producer producerToUpdate = mapper.toProducer(request);

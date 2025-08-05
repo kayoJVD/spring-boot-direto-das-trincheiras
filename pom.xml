@@ -1,12 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion/>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<!-- AQUI ESTÁ A CORREÇÃO -->
+	<modelVersion>4.0.0</modelVersion>
+
+	<!-- Adicionar o parent do Spring Boot aqui é uma boa prática -->
+	<!-- para gerenciar as versões das dependências em todos os módulos -->
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.5.3</version>
+		<relativePath/> <!-- Permite que os módulos encontrem este POM pai -->
+	</parent>
+
 	<groupId>academy.devdojo</groupId>
-	<artifactId>spring-boo-direto-das-trincheiras</artifactId>
+	<artifactId>spring-boot-direto-das-trincheiras</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
+
+	<name>Spring Boot Direto Das Trincheiras</name>
+	<description>Projeto Pai que agrega todos os serviços</description>
+
 	<modules>
 		<module>anime-service</module>
+		<module>user-service</module>
 	</modules>
+
 </project>

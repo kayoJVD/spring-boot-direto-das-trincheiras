@@ -1,22 +1,20 @@
 package academy.devdojo.repository;
 
+import academy.devdojo.commons.AnimeUtils;
 import academy.devdojo.domain.Anime;
 import org.assertj.core.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.BDDMockito;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 @ExtendWith(MockitoExtension.class)
+@TestMethodOrder(MethodOrderer.class)
 class AnimeHardCodeRepositoryTest {
 
     @InjectMocks
@@ -27,13 +25,13 @@ class AnimeHardCodeRepositoryTest {
 
     private List<Anime> animeList;
 
+    @InjectMocks
+    private AnimeUtils animeUtils;
+
     @BeforeEach
     void init() {
 
-        Anime dbz = new Anime(1L, "Dragon Ball Z");
-        Anime onePunchMan = new Anime(2L, "One Punch-Mane");
-        Anime fullMetal = new Anime(3L, "Full Metal  Brotherhod");
-        animeList = new ArrayList<>(List.of(dbz, onePunchMan, fullMetal));
+        animeList = animeUtils.newAnimeList();
     }
 
     @Test
@@ -48,7 +46,7 @@ class AnimeHardCodeRepositoryTest {
     }
 
     @Test
-    @DisplayName("findName return all list whit found object when name exists")
+    @DisplayName("findByName return all list whit found object when name exists")
     @Order(2)
     void findByName_ReturnsEmptyList_WhenNameIsNull() {
         BDDMockito.when(animeData.getAnimes()).thenReturn(animeList);
@@ -91,7 +89,7 @@ class AnimeHardCodeRepositoryTest {
     void save_CreatesAnime_WhenSuccess() {
         BDDMockito.when(animeData.getAnimes()).thenReturn(animeList);
 
-        Anime berserkSave = Anime.builder().name("Berserk").id(99L).build();
+        Anime berserkSave = animeUtils.newAnimeToSave();
 
         Anime anime = repository.save(berserkSave);
 
@@ -105,7 +103,7 @@ class AnimeHardCodeRepositoryTest {
     @Test
     @DisplayName("delete removes an anime")
     @Order(6)
-    void delete_RemoveAnime_WhenSuccess(){
+    void delete_RemoveAnime_WhenSuccess() {
         BDDMockito.when(animeData.getAnimes()).thenReturn(animeList);
 
         Anime animeDelete = animeList.getFirst();
@@ -120,7 +118,7 @@ class AnimeHardCodeRepositoryTest {
     @Test
     @DisplayName("update updates an Anime")
     @Order(7)
-    void update_UpdatesAnime_WhenSuccess(){
+    void update_UpdatesAnime_WhenSuccess() {
         BDDMockito.when(animeData.getAnimes()).thenReturn(animeList);
 
         Anime animeFirst = this.animeList.getFirst();
