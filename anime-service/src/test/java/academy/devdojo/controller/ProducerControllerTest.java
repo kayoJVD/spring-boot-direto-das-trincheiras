@@ -6,7 +6,11 @@ import academy.devdojo.config.ConnectionConfigurationProperties;
 import academy.devdojo.domain.Producer;
 import academy.devdojo.repository.ProducerData;
 import academy.devdojo.repository.ProducerHardCodeRepository;
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.*;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
 import org.mockito.ArgumentMatchers;
 import org.mockito.BDDMockito;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,11 +21,14 @@ import org.springframework.boot.test.mock.mockito.SpyBean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
+import java.util.Collections;
 import java.util.List;
+import java.util.stream.Stream;
 
 @WebMvcTest(controllers = ProducerController.class)
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
@@ -195,6 +202,80 @@ class ProducerControllerTest {
                 .andDo(MockMvcResultHandlers.print())
                 .andExpect(MockMvcResultMatchers.status().isNotFound())
                 .andExpect(MockMvcResultMatchers.status().reason("Producer not found"));
+    }
+
+    @ParameterizedTest
+    @MethodSource("postProducerBadRequestSource")
+    @DisplayName("PUT v1/producers returns bad request when fields are empty")
+    @Order(11)
+    void ReturnsBadRequest_WhenFieldIsEmpty(String fileName, List<String> error) throws Exception {
+        BDDMockito.when(producerData.getProducers()).thenReturn(producerList);
+
+        var request = fileUtils.readResourceFile("producer/%s".formatted(fileName));
+
+        MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders
+                        .put(URL)
+                        .content(request)
+                        .contentType(MediaType.APPLICATION_JSON))
+                .andDo(MockMvcResultHandlers.print())
+                .andExpect(MockMvcResultMatchers.status().isBadRequest()).andReturn();
+
+        Exception resolvedException = mvcResult.getResolvedException();
+        Assertions.assertThat(resolvedException).isNotNull();
+
+
+
+        String message = resolvedException.getMessage();
+
+        Assertions.assertThat(message).contains(error);
+    }
+
+    private static Stream<Arguments> postProducerBadRequestSource(){
+        var nameIsRequiredError = "The field 'name' is required";
+        var IdIsNotNull = "The field 'id' is not null";
+        var allErrors = List.of(nameIsRequiredError, IdIsNotNull);
+
+        return Stream.of(
+                Arguments.of("put-request-producer-empty-fields-400.json", allErrors),
+                Arguments.of("put-request-producer-blank-fields-400.json", allErrors)
+        );
+    }
+
+    @ParameterizedTest
+    @MethodSource("putProducerBadRequestSource")
+    @DisplayName("PUT v1/producers returns bad request when fields are blank")
+    @Order(12)
+    void ReturnsBadRequest_WhenFieldIsBlank(String fileName, List<String> error) throws Exception {
+        BDDMockito.when(producerData.getProducers()).thenReturn(producerList);
+
+        var request = fileUtils.readResourceFile("producer/%s".formatted(fileName));
+
+        MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders
+                        .post(URL)
+                        .content(request)
+                        .header("x-api-key", "v1")
+                        .contentType(MediaType.APPLICATION_JSON))
+                .andDo(MockMvcResultHandlers.print())
+                .andExpect(MockMvcResultMatchers.status().isBadRequest()).andReturn();
+
+        Exception resolvedException = mvcResult.getResolvedException();
+        Assertions.assertThat(resolvedException).isNotNull();
+
+
+        String message = resolvedException.getMessage();
+
+        Assertions.assertThat(message).contains(error);
+    }
+
+    private static Stream<Arguments> putProducerBadRequestSource(){
+        var nameIsRequiredError = "The field 'name' is required";
+        List<String> error = Collections.singletonList(nameIsRequiredError);
+        return Stream.of(
+                Arguments.of("post-request-producer-empty-fields-400.json", error),
+                Arguments.of("post-request-producer-blank-fields-400.json", error)
+        );
+
+
     }
 
 }

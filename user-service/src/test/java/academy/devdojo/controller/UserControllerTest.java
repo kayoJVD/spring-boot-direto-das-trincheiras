@@ -204,9 +204,9 @@ class UserControllerTest {
 
     @ParameterizedTest
     @MethodSource("postUsersBadRequestSource")
-    @DisplayName("Post v1/users returns bad request when fields are empty")
+    @DisplayName("Post v1/users returns bad request when fields are invalid")
     @Order(11)
-    void save_ReturnsBadRequest_WhenFieldsAreEmpty(String fileName, List<String> errors) throws Exception {
+    void save_ReturnsBadRequest_WhenFieldsAreInvalid(String fileName, List<String> errors) throws Exception {
 
         BDDMockito.when(userData.getUsers()).thenReturn(userList);
 
@@ -245,7 +245,49 @@ class UserControllerTest {
         );
     }
 
+    @ParameterizedTest
+    @MethodSource("putUsersBadRequestSource")
+    @DisplayName("Put v1/users returns bad request when fields are invalid")
+    @Order(12)
+    void update_UpdateUserReturnBadRequest_WhenFieldAreInvalid(String fileName, List<String> error) throws Exception {
+        BDDMockito.when(userData.getUsers()).thenReturn(userList);
 
+        String request = readFile("user/%s".formatted(fileName));
+
+        MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.put("/v1/users")
+                        .content(request)
+                        .contentType(MediaType.APPLICATION_JSON))
+                .andDo(MockMvcResultHandlers.print())
+                .andExpect(MockMvcResultMatchers.status().isBadRequest())
+                .andReturn();
+
+        Exception resolvedException = mvcResult.getResolvedException();
+
+        Assertions.assertThat(resolvedException).isNotNull();
+
+
+
+        Assertions.assertThat(resolvedException.getMessage()).contains(error);
+    }
+
+    private static Stream<Arguments> putUsersBadRequestSource(){
+        var idRequiredError = "The field 'id' cannot";
+        var firstNameRequiredError = "The field 'firstName' is required";
+        var lastNameRequiredError = "The field 'lastName' is required";
+        var emailRequiredError = "The 'email' is required";
+        var emailInvalidError = "The e-mail is not valid";
+
+        var allError =  List.of(firstNameRequiredError, lastNameRequiredError, emailRequiredError, idRequiredError);
+        var emailError = Collections.singletonList(emailInvalidError);
+
+
+        return Stream.of(
+                Arguments.of("put-request-user-empty-fields-400.json", allError),
+                Arguments.of("put-request-user-blank-fields-400.json", allError),
+                Arguments.of("put-request-user-email-invalid-400.json", emailError)
+        );
+
+    }
 
 
 
