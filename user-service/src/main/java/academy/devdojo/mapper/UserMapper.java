@@ -1,8 +1,8 @@
 package academy.devdojo.mapper;
 
 import academy.devdojo.domain.User;
-import academy.devdojo.request.UserPostRequest;
-import academy.devdojo.request.UserPutRequest;
+import academy.devdojo.anime.request.UserPostRequest;
+import academy.devdojo.anime.request.UserPutRequest;
 import academy.devdojo.response.UserGetResponse;
 import academy.devdojo.response.UserPostResponse;
 import org.mapstruct.Mapper;

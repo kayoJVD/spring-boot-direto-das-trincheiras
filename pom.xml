@@ -24,8 +24,9 @@
 	<description>Projeto Pai que agrega todos os serviços</description>
 
 	<modules>
-		<module>anime-service</module>
-		<module>user-service</module>
-	</modules>
+        <module>commons-core</module>
+        <module>anime-service</module>
+        <module>user-service</module>
+    </modules>
 
 </project>

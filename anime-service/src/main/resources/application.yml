@@ -1,8 +1,16 @@
 spring:
-  profiles:
-    active: mysql
+  config:
+    import: optional:classpath:.env[.properties]
   application:
     name: anime-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/anime_service?useTimeZone=true&serverTimeZone=UTC&createDatabaseIfNotExist=true
+    username: ${ENV_ROOT_USER}
+    password: ${ENV_ROOT_PASSWORD}
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
   threads:
     virtual:
       enabled: true
@@ -12,6 +20,7 @@ logging:
     academy.devdojo: debug
 
 server:
+  port: 8090
   servlet:
     context-path: /
   error:
@@ -20,8 +29,3 @@ server:
   tomcat:
     threads:
       max: 20
-
-
-
-
-
