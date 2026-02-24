@@ -11,7 +11,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ProducerService {
 
-    private final ProducerHardCodeRepository repository;
+    private final ProducerRepository repository;
 
     public List<Producer> findAll(String name) {
         return name == null ? repository.findAll() : repository.findByName(name);
@@ -32,8 +32,10 @@ public class ProducerService {
     }
 
     public void update(Producer producerToUpdate) {
-        Producer producer = findByIdOrThrowNotFound(producerToUpdate.getId());
-        producerToUpdate.setCreatedAt(producer.getCreatedAt());
-        repository.update(producerToUpdate);
+        findByIdOrThrowNotFound(producerToUpdate.getId());
+        repository.save(producerToUpdate);
+    }
+    public void assertProducerExists(Long id) {
+        findByIdOrThrowNotFound(id);
     }
 }

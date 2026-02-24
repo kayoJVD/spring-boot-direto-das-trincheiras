@@ -72,7 +72,7 @@ public class AnimeController {
 
         return ResponseEntity.noContent().build();
     }
-        }
+}
 
 
 

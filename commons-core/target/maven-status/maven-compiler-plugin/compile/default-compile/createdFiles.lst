@@ -1,0 +1,4 @@
+academy\devdojo\exception\GlobalErrorHandAdvice.class
+academy\devdojo\exception\DefaultErrorMessage.class
+academy\devdojo\exception\EmailAlreadyExistsException.class
+academy\devdojo\exception\NotFoundException.class

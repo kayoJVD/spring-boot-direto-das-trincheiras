@@ -11,6 +11,7 @@ import lombok.*;
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @ToString
 @Entity
+@Table(name = "devdojo_user")
 
 public class User {
     @EqualsAndHashCode.Include

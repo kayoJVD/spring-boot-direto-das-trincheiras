@@ -37,9 +37,6 @@ class AnimeControllerTest {
     private static final String URL = "/v1/animes";
     @Autowired
     private MockMvc mockMvc;
-
-
-
     @MockBean
     private AnimeRepository repository;
     @Autowired
